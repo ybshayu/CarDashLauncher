@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#1E1E1E">
+    <FrameLayout android:id="@+id/fragment_container" android:layout_width="0dp" android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/dock_bar" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:id="@+id/dock_bar" android:layout_width="match_parent" android:layout_height="80dp"
+        android:background="#CC1E1E1E" android:gravity="center" android:orientation="horizontal"
+        android:paddingStart="32dp" android:paddingEnd="32dp" app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout android:id="@+id/dock_map" style="@style/DockItem" android:layout_weight="1">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_map"/>
+            <TextView style="@style/DockText" android:text="地图"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/dock_music" style="@style/DockItem" android:layout_weight="1">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_music"/>
+            <TextView style="@style/DockText" android:text="音乐"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/dock_phone" style="@style/DockItem" android:layout_weight="1">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_phone"/>
+            <TextView style="@style/DockText" android:text="电话"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/dock_settings" style="@style/DockItem" android:layout_weight="1">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_settings"/>
+            <TextView style="@style/DockText" android:text="设置"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

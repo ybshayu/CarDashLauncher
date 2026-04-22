@@ -1,0 +1,6 @@
+<resources>
+    <color name="background">#1E1E1E</color>
+    <color name="card_background">#2A2A2A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+</resources>
