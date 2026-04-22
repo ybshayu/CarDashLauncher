@@ -5,11 +5,11 @@ on:
     branches: [ master, main ]
   pull_request:
     branches: [ master, main ]
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04      # 使用 Ubuntu 20.04，预装 JDK 8 环境
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,11 +21,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v2   # 改用 v2，兼容 JDK 8
         with:
           api-level: 28
           build-tools: 28.0.3
-          target: android-28
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
